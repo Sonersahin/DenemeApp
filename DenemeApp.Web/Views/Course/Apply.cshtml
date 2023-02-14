@@ -1,0 +1,41 @@
+﻿@model Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Apply</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post" asp-action="apply">
+        <div asp-validation-summary="All"></div>
+        <p>
+            <label asp-for="Name">Name :</label>
+            <input asp-for="Name"/>
+        </p>
+        <p>
+            <label asp-for="Email">Email :</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="Phone">Phone :</label>
+            <input asp-for="Phone"/>
+        </p>
+        <p>
+            <label asp-for="WillAttend">WillAttend =</label>
+            <select asp-for="WillAttend">
+                <option value="">Select an option</option>
+                <option value="true">yes, i will attend</option>
+                <option value="false">no, i will no attend</option>
+            </select>
+        </p>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>
